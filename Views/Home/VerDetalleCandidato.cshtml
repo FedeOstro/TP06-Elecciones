@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidato</title>
+</head>
+<body>
+    <div class="container">
+    <div class="candidate-details">
+      <h2>Nombre del Candidato</h2>
+        @foreach (string i in ViewBag.VerInfoCandidato)
+        {   
+            <ol>
+        <li><p>@ViewBag.VerInfoCandidato.idCandidato </p></li>
+        <li><p>@ViewBag.VerInfoCandidato.IdPartido </p></li>
+        <li><p>@ViewBag.VerInfoCandidato.Apellido </p></li>
+        <li><p>@ViewBag.VerInfoCandidato.Nombre </p></li>
+        <li><p>@ViewBag.VerInfoCandidato.FechaNacimiento </p></li>
+        <li><p>@ViewBag.VerInfoCandidato.Foto </p></li>
+        <li><p>@ViewBag.VerInfoCandidato.Postulacion </p></li>
+       </ol>
+        }
+    </div>
+  </div>
+    <a href="VerDetallesPartido.cshtml"></a>
+</body>
+</html>

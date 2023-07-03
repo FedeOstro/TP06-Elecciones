@@ -1,5 +1,6 @@
 using System.Data.SqlClient;
-using Dapper; 
+using Dapper;
+using System.Collections.Generic; 
 
 static class BD{
     private static string _connectionString = @"A-PHZ2-CIDI-052=localhost;Elecciones2023=NombreBase;Trusted_Connection=True;";
@@ -34,18 +35,19 @@ static class BD{
     }
 
     public static List<Partido> ListarPartidos(){
-        list ListaPartidos = null;
+        List <Partido> ListaPartidos = null;
         using (SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT *  FROM Partido ";
             ListaPartidos = db.Query<Partido>(sql).ToList();
         }
-        return ListaPartido;
+        return ListaPartidos;
     }
     public static List<Candidato> ListarCandidatos(int IdPartido){
-        list ListaCandidatos = null;
+        List <Candidato> ListaCandidatos = null;
         using (SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "SELECT * FROM CANDIDATOS";
-            ListaCandidatos = db.Query<Candidato>(sql).ToList();
+            string sql = "SELECT * FROM CANDIDATOS WHERE IdPartido = @cIdPartido";
+            ListaCandidatos = db.Query<Candidato>(sql, new{cIdPartido = IdPartido}).ToList();
         }
+        return ListaCandidatos;
     }
 }

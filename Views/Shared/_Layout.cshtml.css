@@ -46,3 +46,31 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+nav ul li.active a {
+  background-color: #fff;
+  color: #333;
+}
