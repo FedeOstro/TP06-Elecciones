@@ -2,8 +2,8 @@ using System.Data.SqlClient;
 using Dapper;
 using System.Collections.Generic; 
 
-static class BD{
-    private static string _connectionString = @"A-PHZ2-CIDI-052=localhost;Elecciones2023=NombreBase;Trusted_Connection=True;";
+public static class BD{
+    private static string _connectionString = @"SERVER=localhost;DataBase=Elecciones2023;Trusted_Connection=True;";
     public static void AgregarCantidato(Candidato can){
         string SQL = "INSERT INTO Candidato(IdCandidato, IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@cIdCandidato, @cIdPartido, @cApellido, @cNombre, @cFechaNacimiento, @cFoto, @cPostulacion)";
         using(SqlConnection db = new SqlConnection(_connectionString)){
@@ -37,7 +37,7 @@ static class BD{
     public static List<Partido> ListarPartidos(){
         List <Partido> ListaPartidos = null;
         using (SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "SELECT *  FROM Partido ";
+            string sql = "SELECT * FROM Partido";
             ListaPartidos = db.Query<Partido>(sql).ToList();
         }
         return ListaPartidos;
@@ -45,7 +45,7 @@ static class BD{
     public static List<Candidato> ListarCandidatos(int IdPartido){
         List <Candidato> ListaCandidatos = null;
         using (SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "SELECT * FROM CANDIDATOS WHERE IdPartido = @cIdPartido";
+            string sql = "SELECT * FROM Candidato WHERE IdPartido = @cIdPartido";
             ListaCandidatos = db.Query<Candidato>(sql, new{cIdPartido = IdPartido}).ToList();
         }
         return ListaCandidatos;

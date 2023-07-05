@@ -6,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>
-        
-        @ViewBag.InfoPartido.idPartido
+        <h2>
+        @ViewBag.InfoPartido.IdPartido
        <ol>
         <li><p>@ViewBag.InfoPartido.Nombre </p></li>
         <li><p>@ViewBag.InfoPartido.Logo </p></li>
@@ -18,6 +17,11 @@
         <li><p>@ViewBag.InfoPartido.CantidadSenadores </p></li>
        </ol>
        </h2>
-      
+    <ol>
+    @for (int i = 0; i < ViewBag.ListaCandidatos.Count; i++)
+    {
+        <li>@ViewBag.Listacandidatos(i).Nombre.Apellido</li>
+    }
+    </ol>
 </body>
 </html>
