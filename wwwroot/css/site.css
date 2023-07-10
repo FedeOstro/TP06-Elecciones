@@ -26,46 +26,30 @@ html,body{
   padding: 0;
 }
 
-body{
-  width: 100%;
-  height: 100%;
-  font-family: sans-serif;
-  letter-spacing: 0.03em;
-  line-height: 1.6;
+.index{
+  background-color: #cec4fc;
 }
-
-.title{
-    text-align: center;
-    font-size: 40px;
-    color: #6a6a6a;
-    margin-top: 100px;
-    font-weight: 100;
-}
-
 .conteiner{
   width: 100%;
   max-width: 100%;
   height: 430px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+ 
   margin: auto;
 }
 
 .conteiner .card{
   width: 330px;
   height: 430px;
-  border-radius: 8px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0,0);
-  overflow: hidden;
+  background-color: #929ba3;
+  opacity: 100;
   margin: 20px;
   text-align: center;
-  transition: all 0,25s;
+  transition: all 0,25s;  
 }
 
 .conteiner .card:hover{
   transform: translateY(-15px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0,0);
+  box-shadow: 0 12px 16px rgba(0, 0, 0,100);
 }
 
 .conteiner .card img{
@@ -73,22 +57,16 @@ body{
   height: 220px;
 }
 
-.conteiner .card h4{
-  font-weight: 600;
-}
-
 .conteiner .card p{
   padding: 0 1rem;
   font-size: 16px;
   font-weight: 300;
 }
-
-.conteiner .card a{
-  font-weight: 500;
-  text-decoration: none;
-  color: #3498db;
+.TotalConteiner{
+  display: flex;
+  justify-content: space-between;
 }
-
+ /*VerDetalleCandidato*/
 .container {
   display: flex;
   align-items: center;
@@ -97,4 +75,87 @@ body{
 .candidate-details {
   flex: 1;
   padding-right: 20px;
+}
+/* LAYOUT*/
+header{
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+
+header nav ul li a img{
+  width: 60px;
+  height: auto;
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+}
+
+.btn-primary {
+  color: #333;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav {
+  color: #333;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 15px solid #333;
+}
+.border-bottom {
+  border-bottom: 15px solid #333;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 160px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #414141;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #7575752d;
+  color: #333;
+}
+
+nav ul li.active a {
+  background-color: #7575752d;
+  color: #333;
 }

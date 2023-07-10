@@ -10,11 +10,12 @@
         @ViewBag.InfoPartido.IdPartido
        <ol>
         <li><p>@ViewBag.InfoPartido.Nombre </p></li>
-        <li><p>@ViewBag.InfoPartido.Logo </p></li>
-        <li><p>@ViewBag.InfoPartido.SitioWeb </p></li>
-        <li><p>@ViewBag.InfoPartido.FechaFundacion </p></li>
-        <li><p>@ViewBag.InfoPartido.CantidadDiputados </p></li>
-        <li><p>@ViewBag.InfoPartido.CantidadSenadores </p></li>
+        <img src="~/img/@ViewBag.InfoPartido.Logo">
+        <li><p><a href=@ViewBag.InfoPartido.SitioWeb>Pagina juntos por el cambio </a> </p></li>
+        <li><p>FECHA DE CREACION @ViewBag.InfoPartido.FechaFundacion </p></li>
+        <li><p>CANTIDAD DE DIPUTADOS @ViewBag.InfoPartido.CantidadDiputados </p></li>
+        <li><p>CANTIDAD DE SENADORES @ViewBag.InfoPartido.CantidadSenadores </p></li>
+        <li><p><a href= '@Url.Action("AgregarCandidato", new {IdCandidato = @ViewBag.InfoPartido.IdPartido})'>Agregar Candidato</a></p></li>
        </ol>
        </h2>
     <ol>
@@ -24,4 +25,5 @@
     }
     </ol>
 </body>
+
 </html>

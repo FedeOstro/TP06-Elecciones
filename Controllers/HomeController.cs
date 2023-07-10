@@ -23,7 +23,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult AgregarCantidato(int IdPartido)
+    public IActionResult AgregarCandidato(int IdPartido)
     {
         ViewBag.IdPartido = IdPartido;
         return View();

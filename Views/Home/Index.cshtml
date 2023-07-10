@@ -10,34 +10,30 @@
     <title>Card</title>
     <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
-<body>
-    <h1 class= "title" Card con efecto hober - magtmus></h1>
+<body class="index">
+    <div class="TotalConteiner">
     <div class = "conteiner"> 
     <div class="card">
     <img src="~/img/Juntos-Por-El-Cambio-Logo.png">
-    <h4>Logo</h4>
     <p>JUNTOS POR EL CAMBIO</p>
     <a href='@Url.Action("VerDetallePartido", new {IdPartido = 4})'>Leer mas</a>
     </div>
     </div>
     
-    <h1 class= "title" Card con efecto hober - magtmus></h1>
     <div class = "conteiner"> 
     <div class="card">
     <img src="~/img/Unión_por_la_Patria_logo.png">
-    <h4>Logo</h4>
     <p>UNION POR LA PATRIA </p>
-    <a href="#">Leer mas</a>
+    <a href='@Url.Action("VerDetallePartido", new {IdPartido = 2})'>Leer mas</a>
     </div>
     </div>
 
-    <h1 class= "title" Card con efecto hober - magtmus></h1>
     <div class = "conteiner"> 
     <div class="card">
     <img src="~/img/Logo_La_Libertad_Avanza.png">
-    <h4>Logo</h4>
     <p>LA LIBERTAD AVANZA</p>
-    <a href="VerDetallePartido.cshtml">Leer mas</a>
+    <a href='@Url.Action("VerDetallePartido", new {IdPartido = 7})'>Leer mas</a>
+    </div>
     </div>
     </div>
 </body>

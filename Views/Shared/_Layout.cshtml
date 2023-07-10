@@ -3,19 +3,19 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - TPXX - Apellido</title>
+        <title>@ViewData["Title"]TP_06_Elecciones</title>
         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-        <nav>
+       
+    </head>
+    <body>
+        <header >
+          <nav>
           <ul>
-            <li><a href='@Url.Action("Index")'></a><img src="~/img/bandera-argentina.jpg" alt="Bandera de Argentina"></li>
+            <li><a href='@Url.Action("Index")'><img src="~/img/bandera-argentina.jpg" alt="Bandera de Argentina"></a></li>
             <li><a href='@Url.Action("Elecciones")'>elecciones 2023</a></li>
             <li><a href='@Url.Action("Creditos")'>créditos</a></li>
           </ul>
-    </nav>
-    </head>
-    <body>
-        <header style="position:fixed; top: 0; margin: 10px 0px 20px 0px;">
-            Encabezado TP XX
+        </nav>
         </header>
         <div style="padding:20px 10px 0px 10px;">
             @RenderBody()
