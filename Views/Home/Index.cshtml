@@ -12,29 +12,16 @@
 </head>
 <body class="index">
     <div class="TotalConteiner">
-    <div class = "conteiner"> 
-    <div class="card">
-    <img src="~/img/Juntos-Por-El-Cambio-Logo.png">
-    <p>JUNTOS POR EL CAMBIO</p>
-    <a href='@Url.Action("VerDetallePartido", new {IdPartido = 4})'>Leer mas</a>
-    </div>
-    </div>
-    
-    <div class = "conteiner"> 
-    <div class="card">
-    <img src="~/img/Unión_por_la_Patria_logo.png">
-    <p>UNION POR LA PATRIA </p>
-    <a href='@Url.Action("VerDetallePartido", new {IdPartido = 2})'>Leer mas</a>
-    </div>
-    </div>
-
-    <div class = "conteiner"> 
-    <div class="card">
-    <img src="~/img/Logo_La_Libertad_Avanza.png">
-    <p>LA LIBERTAD AVANZA</p>
-    <a href='@Url.Action("VerDetallePartido", new {IdPartido = 7})'>Leer mas</a>
-    </div>
-    </div>
+    @for (int i = 0; i < ViewBag.ListaPartido.Count; i++)
+    {
+     <div class = "conteiner"> 
+        <div class="card">
+        <img src="~/img/@ViewBag.ListaPartido[i].Logo">
+        <p>@ViewBag.ListaPartido[i].Nombre</p>
+        <a href='@Url.Action("VerDetallePartido", new {IdPartido = @ViewBag.ListaPartido[i].IdPartido})'>Leer mas</a>
+        </div>
+     </div> 
+    }
     </div>
 </body>
 </html>

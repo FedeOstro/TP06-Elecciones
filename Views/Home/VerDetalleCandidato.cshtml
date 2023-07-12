@@ -25,4 +25,5 @@
     </div>
 </div>
 
-<a href="@Url.Action("VerDetallePartido", "Home", new { idPartido = Model.IdPartido })" class="btn btn-primary">Volver al Partido</a>
+<a href='@Url.Action("EliminarCandidato", new {idCandidato = @ViewBag.VerInfoCandidato.IdCandidato, IdPartido = @ViewBag.VerInfoCandidato.IdPartido})'></a>
+<a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = Model.IdPartido })' class="btn btn-primary">Volver al Partido</a>

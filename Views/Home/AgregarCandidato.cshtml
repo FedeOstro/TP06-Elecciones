@@ -7,7 +7,7 @@
 
 <h1>Agregar Candidato</h1>
 
-<form method="post" action='@Url.Action("GuardarCandidato", "Home")'>
+<form action='@Url.Action("GuardarCandidato")' method="post">
     <input type="hidden" name="IdPartido" value="@ViewBag.IdPartido" />
 
     <div class="form-group">

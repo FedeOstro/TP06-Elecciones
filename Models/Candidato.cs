@@ -6,4 +6,5 @@ public class Candidato{
     public DateTime FechaNacimiento{get;set;}
     public string Foto{get;set;}
     public string Postulacion{get;set;}
+
 }

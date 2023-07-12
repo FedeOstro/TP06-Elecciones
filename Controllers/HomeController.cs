@@ -29,24 +29,24 @@ public class HomeController : Controller
         return View();
     }
     
-    [HttpPost] IActionResult GuardadCandidato(Candidato can)
+    [HttpPost] public IActionResult GuardadCandidato(Candidato can)
     {
         BD.AgregarCantidato(can);
         return VerDetallePartido(can.IdPartido);
     }
 
-    IActionResult EliminarCandidato(int idCandidato, int idPartido)
+    public IActionResult EliminarCandidato(int idCandidato, int idPartido)
     {
         BD.EliminarCandidato(idCandidato);
         return VerDetallePartido(idPartido);
     }
 
-    IActionResult Elecciones()
+    public IActionResult Elecciones()
     {
         return View();
     }
 
-    IActionResult Creditos()
+    public IActionResult Creditos()
     {
         return View();
     }
