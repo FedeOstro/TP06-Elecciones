@@ -29,7 +29,7 @@ public static class BD{
         Candidato miCandidato = null;
         using (SqlConnection db = new SqlConnection(_connectionString)){
             string SQL = "SELECT * FROM Candidato WHERE IdCandidato = @cIdCandidato";
-            miCandidato = db.QueryFirstOrDefault<Candidato>(SQL, new{cICandidato = idCandidato});
+            miCandidato = db.QueryFirstOrDefault<Candidato>(SQL, new{cIdCandidato = idCandidato});
         }
         return miCandidato;
     }

@@ -35,10 +35,11 @@ public class HomeController : Controller
         return RedirectToAction("VerDetallePartido", new {IdPartido = can.IdPartido});
     }
 
-    public IActionResult EliminarCandidato(int idCandidato, int idPartido)
+    public IActionResult EliminarCandidato(int IdCandidato, int idPartido)
     {
-        BD.EliminarCandidato(idCandidato);
-        return VerDetallePartido(idPartido);
+        Console.WriteLine(idPartido);
+        BD.EliminarCandidato(IdCandidato);
+        return RedirectToAction("VerDetallePartido", new {IdPartido = idPartido});
     }
 
     public IActionResult Elecciones()

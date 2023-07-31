@@ -5,25 +5,26 @@
     Layout = "_Layout";
 }
 
-<h1>@Model.Nombre</h1>
-
+<h1>@ViewBag.Nombre</h1>
+<div class="Partidoinfo">
 <div class="card mb-3">
     <div class="row no-gutters">
         <div class="col-md-4">
-            <img src="@Model.Foto" class="card-img" alt="@Model.Nombre">
+            <img src="@ViewBag.Foto" class="card-img" alt="@ViewBag.Nombre">
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">Información del Candidato</h5>
-                <ul class="list-group">
-                    <li class="list-group-item">Apellido: @Model.Apellido</li>
-                    <li class="list-group-item">Fecha de Nacimiento: @Model.FechaNacimiento.ToString("dd/MM/yyyy")</li>
-                    <li class="list-group-item">Postulación: @Model.Postulacion</li>
-                </ul>
+                <h2 class="card-title">Información del Candidato</h2>
+                <ol class="list-group">
+                    Apellido: @ViewBag.VerInfoCandidato.Apellido
+                    Fecha de Nacimiento: @ViewBag.VerInfoCandidato.FechaNacimiento.ToShortDateString()
+                    Postulación: @ViewBag.VerInfoCandidato.Postulacion
+                </ol>
             </div>
         </div>
     </div>
 </div>
+</div>
 
-<a href='@Url.Action("EliminarCandidato", new {idCandidato = @ViewBag.VerInfoCandidato.IdCandidato, IdPartido = @ViewBag.VerInfoCandidato.IdPartido})'></a>
-<a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = Model.IdPartido })' class="btn btn-primary">Volver al Partido</a>
+<a href='@Url.Action("EliminarCandidato", new {idCandidato = @ViewBag.IdCandidato, idPartido = @ViewBag.IdPartido})'>Borrar</a>
+<a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = ViewBag.IdPartido })' class="btn btn-primary">Volver al Partido</a>
