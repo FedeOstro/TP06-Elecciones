@@ -29,10 +29,10 @@ public class HomeController : Controller
         return View();
     }
     
-    [HttpPost] public IActionResult GuardadCandidato(Candidato can)
+    [HttpPost] public IActionResult GuardarCandidato(Candidato can)
     {
         BD.AgregarCantidato(can);
-        return VerDetallePartido(can.IdPartido);
+        return RedirectToAction("VerDetallePartido", new {IdPartido = can.IdPartido});
     }
 
     public IActionResult EliminarCandidato(int idCandidato, int idPartido)

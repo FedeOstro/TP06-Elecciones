@@ -195,3 +195,38 @@ nav ul li.active a {
 .credits-container .role {
   color: #000000;
 }
+
+/*VerDetallePartido*/
+.Partidoinfo {
+  text-align: center;
+  margin: 20px;
+}
+
+.Partidoinfo h2 {
+  margin-bottom: 10px;
+}
+
+.Partidoinfo img {
+  max-width: 300px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.Partidoinfo ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Partidoinfo li {
+  margin-bottom: 5px;
+}
+
+.Partidoinfo li a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.Partidoinfo li a:hover {
+  text-decoration: underline;
+}
+

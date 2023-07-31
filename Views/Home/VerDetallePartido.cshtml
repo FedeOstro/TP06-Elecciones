@@ -6,24 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-        <h2>
-        @ViewBag.InfoPartido.IdPartido
-       <ol>
-        <li><p>@ViewBag.InfoPartido.Nombre </p></li>
-        <img src="~/img/@ViewBag.InfoPartido.Logo">
+       <div class="Partidoinfo">
+        <ol>
+        <h2>@ViewBag.InfoPartido.Nombre </h2>
+        <p>ID del partido: @ViewBag.InfoPartido.IdPartido</p>
+        <img src="~/img/@ViewBag.InfoPartido.Logo" width="300" height="auto">
         <li><p><a href=@ViewBag.InfoPartido.SitioWeb>Pagina juntos por el cambio </a> </p></li>
         <li><p>FECHA DE CREACION @ViewBag.InfoPartido.FechaFundacion </p></li>
         <li><p>CANTIDAD DE DIPUTADOS @ViewBag.InfoPartido.CantidadDiputados </p></li>
         <li><p>CANTIDAD DE SENADORES @ViewBag.InfoPartido.CantidadSenadores </p></li>
-        <li><p><a href= '@Url.Action("AgregarCandidato", new {IdCandidato = @ViewBag.InfoPartido.IdPartido})'>Agregar Candidato</a></p></li>
+        <li><p><a href= '@Url.Action("AgregarCandidato", new {IdPartido = @ViewBag.InfoPartido.IdPartido})'>Agregar Candidato</a></p></li>
        </ol>
-       </h2>
-    <ol>
+
     @for (int i = 0; i < ViewBag.ListaCandidatos.Count; i++)
     {
-        <li>@ViewBag.Listacandidatos(i).Nombre.Apellido</li>
+        @ViewBag.Listacandidatos[i].Nombre 
+        @ViewBag.Listacandidatos[i].Apellido
+        <a href='@Url.Action("VerDetalleCandidato", new{idCandidato = i })'>Ver detalle candidato</a>
     }
     </ol>
+    </div>
 </body>
 
 </html>

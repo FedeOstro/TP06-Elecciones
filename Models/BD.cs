@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public static class BD{
     private static string _connectionString = @"SERVER=localhost;DataBase=Elecciones2023;Trusted_Connection=True;";
     public static void AgregarCantidato(Candidato can){
-        string SQL = "INSERT INTO Candidato(IdCandidato, IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@cIdCandidato, @cIdPartido, @cApellido, @cNombre, @cFechaNacimiento, @cFoto, @cPostulacion)";
+        string SQL = "INSERT INTO Candidato( IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@cIdPartido, @cApellido, @cNombre, @cFechaNacimiento, @cFoto, @cPostulacion)";
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            db.Execute(SQL, new{cIdCandidato = can.IdCandidato, cIdPartido = can.IdPartido, cApellido = can.Apellido, cNombre = can.Nombre, cFechaNacimiento= can.FechaNacimiento, cFoto = can.Foto, cPostulacion = can.Postulacion});
+            db.Execute(SQL, new{ cIdPartido = can.IdPartido, cApellido = can.Apellido, cNombre = can.Nombre, cFechaNacimiento= can.FechaNacimiento, cFoto = can.Foto, cPostulacion = can.Postulacion});
         }
     }
     public static void EliminarCandidato(int IdCandidato){
