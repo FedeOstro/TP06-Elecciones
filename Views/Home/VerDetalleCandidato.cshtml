@@ -20,11 +20,12 @@
                     Fecha de Nacimiento: @ViewBag.VerInfoCandidato.FechaNacimiento.ToShortDateString()
                     Postulación: @ViewBag.VerInfoCandidato.Postulacion
                 </ol>
+                <img src="@ViewBag.VerInfoCandidato.Foto" alt="a">
             </div>
         </div>
     </div>
 </div>
 </div>
 
-<a href='@Url.Action("EliminarCandidato", new {idCandidato = @ViewBag.IdCandidato, idPartido = @ViewBag.IdPartido})'>Borrar</a>
-<a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = ViewBag.IdPartido })' class="btn btn-primary">Volver al Partido</a>
+<a href='@Url.Action("EliminarCandidato", new {IdCandidato = @ViewBag.VerInfoCandidato.IdCandidato, idPartido = @ViewBag.VerInfoCandidato.IdPartido})'>Borrar</a>
+<a href='@Url.Action("VerDetallePartido", "Home", new { idPartido = @ViewBag.VerInfoCandidato.IdPartido })' class="btn btn-primary">Volver al Partido</a>

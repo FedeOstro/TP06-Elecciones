@@ -17,12 +17,16 @@
         <li><p>CANTIDAD DE SENADORES @ViewBag.InfoPartido.CantidadSenadores </p></li>
         <li><p><a href= '@Url.Action("AgregarCandidato", new {IdPartido = @ViewBag.InfoPartido.IdPartido})'>Agregar Candidato</a></p></li>
      </ol>
+    <div class="candidatos">
     @foreach (var item in ViewBag.ListaCandidatos)
-    {
-        @item.Nombre
-        @item.Apellido
-        <a href='@Url.Action("VerDetalleCandidato", new{idCandidato = @item.IdCandidato})'>Ver detalle candidato</a>
+    {   
+        <section class="can">
+            @item.Nombre
+            @item.Apellido <br>
+            <a href='@Url.Action("VerDetalleCandidato", new{idCandidato = @item.IdCandidato})'>Ver detalle candidato</a>
+        </section>
     }
+    </div>
     </div>
 </body>
 

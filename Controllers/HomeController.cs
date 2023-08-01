@@ -38,6 +38,7 @@ public class HomeController : Controller
     public IActionResult EliminarCandidato(int IdCandidato, int idPartido)
     {
         Console.WriteLine(idPartido);
+        Console.WriteLine(IdCandidato);
         BD.EliminarCandidato(IdCandidato);
         return RedirectToAction("VerDetallePartido", new {IdPartido = idPartido});
     }

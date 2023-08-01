@@ -79,6 +79,7 @@ html,body{
   flex: 1;
   padding-right: 20px;
 }
+
 /* LAYOUT*/
 header{
   background-color: white;
@@ -102,9 +103,7 @@ a {
 }
 
 .btn-primary {
-  color: #333;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  margin: 10px;
 }
 
 .nav {
@@ -230,3 +229,17 @@ nav ul li.active a {
   text-decoration: underline;
 }
 
+.Partidoinfo .candidatos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Partidoinfo .can{
+  border: 1px solid black;
+  border-radius: 10%;
+  height: auto;
+  width: 150px;
+  margin: 20px;
+  background-color: rgb(162, 252, 255);
+}

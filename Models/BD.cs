@@ -3,7 +3,7 @@ using Dapper;
 using System.Collections.Generic; 
 
 public static class BD{
-    private static string _connectionString = @"SERVER=localhost;DataBase=Elecciones2023;Trusted_Connection=True;";
+    private static string _connectionString = @"SERVER=localhost\SQLEXPRESS;DataBase=Elecciones2023;Trusted_Connection=True;";
     public static void AgregarCantidato(Candidato can){
         string SQL = "INSERT INTO Candidato( IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@cIdPartido, @cApellido, @cNombre, @cFechaNacimiento, @cFoto, @cPostulacion)";
         using(SqlConnection db = new SqlConnection(_connectionString)){
